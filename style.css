@@ -644,3 +644,58 @@ button:focus-visible {
 [hidden] {
   display: none !important;
 }
+
+
+.cta-card__banner-link {
+  display: block;
+  margin-top: 1.25rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 28px -14px var(--color-card-shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-card__banner-link:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 32px -14px var(--color-card-shadow);
+}
+
+.cta-card__banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta-card__toc {
+  max-width: 360px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.cta-card__toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+}
+
+.cta-card__toc-chapter {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.2em;
+}
+
+.cta-card__toc-caption {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}

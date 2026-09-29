@@ -95,11 +95,13 @@
   }
 
   function applyConfig() {
-    const button = document.getElementById("cta-button");
-    if (button && LINE_URL) {
-      button.setAttribute("href", LINE_URL);
-      button.hidden = false;
-    }
+    ["cta-button", "cta-banner"].forEach((id) => {
+      const link = document.getElementById(id);
+      if (link && LINE_URL) {
+        link.setAttribute("href", LINE_URL);
+        link.hidden = false;
+      }
+    });
     if (OGP_IMAGE_URL) {
       const meta = document.createElement("meta");
       meta.setAttribute("property", "og:image");
