@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIで作るデジタル手帳｜ChatGPTで作ってEtsyに出品する3STEP</title>
+<meta name="description" content="ChatGPTを使ってデジタル手帳を作る方法を3ステップで紹介。コピペで使えるプロンプト付き。">
+<!-- OGP（SNSでシェアされたときの表示設定。画像は script.js の OGP_IMAGE_URL で指定） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AIで作るデジタル手帳｜ChatGPTで作ってEtsyに出品する3STEP">
+<meta property="og:description" content="ChatGPTを使ってデジタル手帳を作る方法を3ステップで紹介。コピペで使えるプロンプト付き。">
+<meta property="og:url" content="https://mion-ai-mama.github.io/digital-planner-tokuten/">
+<meta name="theme-color" content="#d03f64">
+<link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<main id="main">
+
+  <!-- ============================================================
+       1. ファーストビュー
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="ページ紹介">
+    <div class="hero__inner">
+      <p class="hero__label">コピペで使えるプロンプト付き</p>
+      <h1 class="hero__title">AIで作る<br>デジタル手帳</h1>
+      <p class="hero__subtitle">ChatGPTで作って<br>Etsyに出品するまでの3STEP</p>
+      <p class="hero__desc">
+        絵が描けなくても大丈夫🙌<br>
+        今回はChatGPTを使って、<br>
+        <strong>「デジタル手帳を作る → Etsyに出品する」</strong><br>
+        までの流れを3STEPでまとめました。<br>
+        使うプロンプトもそのまま載せているので、<br>
+        コピペしながら一緒に作ってみてください✨
+      </p>
+      <ol class="flow" aria-label="今回やること">
+        <li class="flow__item"><span class="flow__step">STEP 1</span>好きな柄の背景を作る</li>
+        <li class="flow__arrow" aria-hidden="true">↓</li>
+        <li class="flow__item"><span class="flow__step">STEP 2</span>デジタル手帳にする</li>
+        <li class="flow__arrow" aria-hidden="true">↓</li>
+        <li class="flow__item"><span class="flow__step">STEP 3</span>Etsyに出品する</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. STEP 1
+  ============================================================ -->
+  <section class="section section--soft" id="step1" aria-labelledby="step1-heading">
+    <div class="section__inner reveal">
+      <p class="step__number">STEP 1</p>
+      <h2 class="step__title" id="step1-heading">好きな柄の背景を作ろう</h2>
+      <div class="prose">
+        <p>
+          まずChatGPTを開きます。<br>
+          デジタル手帳の背景にしたい柄をAIに作ってもらいます。<br>
+          下のプロンプトをコピーして、<code>[ ]</code> の部分を好きな柄に変えてください。
+        </p>
+      </div>
+      <div class="prompt-box">
+        <pre class="prompt-box__text" id="prompt-step1">Create a seamless, stylish background pattern for a digital planner cover.
+
+Style: [floral / marble / check / botanical / abstract pattern]
+
+Soft, muted colors.
+No text, no logos, no people.
+
+Vertical A4 ratio.</pre>
+        <button type="button" class="btn btn--primary copy-btn" data-copy-target="prompt-step1" aria-label="STEP1のプロンプトをコピーする">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done" role="status" aria-live="polite">コピーしました ✓</span>
+        </button>
+      </div>
+      <div class="note-box">
+        <p class="note-box__label">柄の例</p>
+        <ul class="pattern-list">
+          <li>🌸 <code>floral</code>：花柄</li>
+          <li>🤍 <code>marble</code>：大理石</li>
+          <li>🧺 <code>check</code>：チェック</li>
+          <li>🌿 <code>botanical</code>：ボタニカル</li>
+          <li>🎨 <code>abstract pattern</code>：抽象柄</li>
+        </ul>
+        <p>
+          色も、<code>beige</code>（ベージュ）・<code>dusty pink</code>（くすみピンク）・<code>sage green</code>（セージグリーン）・<code>light blue</code>（ライトブルー）など、自分の好きな色に変更できます。<br>
+          「どんな柄にしよう？」と考える時間も、楽しんでみてくださいね✨
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. STEP 2
+  ============================================================ -->
+  <section class="section" id="step2" aria-labelledby="step2-heading">
+    <div class="section__inner reveal">
+      <p class="step__number">STEP 2</p>
+      <h2 class="step__title" id="step2-heading">背景をデジタル手帳にしよう</h2>
+      <div class="prose">
+        <p>
+          STEP1で作った画像をChatGPTにアップロードします。<br>
+          その画像と一緒に、次のプロンプトを送ります。
+        </p>
+      </div>
+      <div class="prompt-box">
+        <pre class="prompt-box__text" id="prompt-step2">Use the uploaded background image to create a simple and stylish daily planner.
+
+Keep the background design visible.
+
+Add the following sections:
+
+DAILY PLANNER
+
+Date
+
+Today's Top 3
+
+To-do List
+
+Schedule
+
+Notes
+
+Use a clean, easy-to-read layout.
+
+Vertical A4 ratio.</pre>
+        <button type="button" class="btn btn--primary copy-btn" data-copy-target="prompt-step2" aria-label="STEP2のプロンプトをコピーする">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done" role="status" aria-live="polite">コピーしました ✓</span>
+        </button>
+      </div>
+      <h3 class="section__heading" style="font-size:1.15rem;margin:2.5rem 0 1rem;">うまくいかないとき</h3>
+      <div class="accordion" id="trouble-accordion">
+        <div class="accordion-item">
+          <button type="button" class="accordion-item__question" aria-expanded="false">背景が変わってしまった場合</button>
+          <div class="accordion-item__answer">
+            <p>「背景画像は変更せず、そのまま使用してください」と追加で伝えます。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-item__question" aria-expanded="false">文字がおかしい場合</button>
+          <div class="accordion-item__answer">
+            <p>AIで画像を作ると、文字やスペルが崩れることがあります。完成したら必ず文字をチェックしてください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-item__question" aria-expanded="false">書き込み欄が見づらい場合</button>
+          <div class="accordion-item__answer">
+            <p>「記入欄の部分だけ背景を薄くして、文字を書き込みやすくしてください」と追加で伝えます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. アレンジ例
+  ============================================================ -->
+  <section class="section section--soft" id="arrange" aria-labelledby="arrange-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="arrange-heading">他にもこんな手帳が作れるよ</h2>
+      <p class="section__desc">同じ方法で、こんな手帳にもアレンジできます。</p>
+      <div class="card-grid">
+        <div class="card"><span class="card__icon" aria-hidden="true">📅</span><h3 class="card__title">WEEKLY PLANNER</h3><p class="card__desc">1週間の予定を見渡せる</p></div>
+        <div class="card"><span class="card__icon" aria-hidden="true">🗓️</span><h3 class="card__title">MONTHLY PLANNER</h3><p class="card__desc">1か月の予定をまとめる</p></div>
+        <div class="card"><span class="card__icon" aria-hidden="true">✅</span><h3 class="card__title">HABIT TRACKER</h3><p class="card__desc">習慣づくりを記録する</p></div>
+        <div class="card"><span class="card__icon" aria-hidden="true">🍽️</span><h3 class="card__title">MEAL PLANNER</h3><p class="card__desc">毎日の献立を考える</p></div>
+        <div class="card"><span class="card__icon" aria-hidden="true">👛</span><h3 class="card__title">BUDGET TRACKER</h3><p class="card__desc">お金の出入りを記録する</p></div>
+      </div>
+      <p class="section__desc" style="margin:2rem 0 0;">
+        まずはDAILY PLANNERを1つ作ってみて、<br>慣れたらいろいろ試してみよう✨
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. STEP 3
+  ============================================================ -->
+  <section class="section" id="step3" aria-labelledby="step3-heading">
+    <div class="section__inner reveal">
+      <p class="step__number">STEP 3</p>
+      <h2 class="step__title" id="step3-heading">Etsyに出品してみよう</h2>
+      <div class="prose">
+        <p>
+          完成したデジタル手帳はPDFにして、<br>
+          Etsyなどでデジタル商品として販売できます。
+        </p>
+      </div>
+      <ul class="check-list">
+        <li>在庫を抱えない</li>
+        <li>梱包不要</li>
+        <li>発送不要</li>
+      </ul>
+      <div class="note-box">
+        <p class="note-box__label">PDFにする</p>
+        <p>ChatGPTに、次のように伝えます。</p>
+        <p class="quote-box">「このデジタル手帳をA4サイズのPDFにしてください」</p>
+      </div>
+      <h3 class="section__heading" style="font-size:1.15rem;margin:2.5rem 0 1rem;">Etsyで出品する流れ</h3>
+      <ol class="numbered-steps">
+        <li>Etsyでショップを開設</li>
+        <li>商品ページを作る</li>
+        <li>商品画像を登録</li>
+        <li>PDFをアップロード</li>
+        <li>価格などを設定して出品</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. 出品前のチェック
+  ============================================================ -->
+  <section class="section section--soft" id="check" aria-labelledby="check-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="check-heading">出品前にここだけチェック</h2>
+      <div class="card">
+        <ul class="check-list">
+          <li>AIを使って制作した場合は、Etsyの商品説明でAIを使用したことを開示する</li>
+          <li>キャラクター・ブランド・他人の作品などを真似しない</li>
+          <li>AIが生成した文字やスペルを必ず確認する</li>
+          <li>Etsyでは出品料や販売時の手数料が発生する</li>
+        </ul>
+        <p class="card__desc">※Etsyの規約や料金は変更される場合があります。実際に出品するときはEtsy公式の最新情報を確認してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. 完成
+  ============================================================ -->
+  <section class="section done" id="done" aria-labelledby="done-heading">
+    <div class="section__inner reveal">
+      <p class="done__emoji" aria-hidden="true">👏</p>
+      <h2 class="section__heading" id="done-heading">できたら完成！</h2>
+      <div class="prose">
+        <p>ここまでできたら、<br>あなたのデジタル手帳が完成です✨</p>
+        <p>AIを使えば、<br><span class="done__quote">「自分には作れない」</span><br>と思っていたものも、<br>意外と簡単に形にできます。</p>
+        <p>まずは自分の好きな柄で、<br>1つ作ってみてください☺️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. LINE導線（最終CTA・ページ最下部の1箇所のみ）
+  ============================================================ -->
+  <section class="section section--soft" id="cta" aria-labelledby="cta-heading">
+    <div class="section__inner reveal">
+      <div class="cta-card">
+        <h2 class="cta-card__heading" id="cta-heading">AIで「作れる」ようになった。<br>その次は？</h2>
+        <div class="prose">
+          <p>今回のように、AIを使えば<br>デジタル商品を作ること自体は<br>意外と簡単にできます。</p>
+          <p>でも、<br><strong class="cta-card__highlight">「作れる」＝「収入になる」</strong><br>ではありません。</p>
+          <p>何を作るのか。<br>どうやって届けるのか。<br>どうやって仕事や収入につなげるのか。<br>ここが大切です。</p>
+          <p>
+            私は40代・3児ママで、<br>
+            家事や育児をしながらAIを仕事に活用しています。
+          </p>
+          <p>
+            「AIを使って家でできることを増やしたい」<br>
+            「今より収入を増やしたい」<br>
+            そんな方に向けて、<br>LINEでもAI活用について発信しています✨
+          </p>
+        </div>
+        <a class="btn btn--primary btn--large" id="cta-button" href="#cta" target="_blank" rel="noopener noreferrer" hidden>
+          AIを仕事につなげる方法を見てみる
+        </a>
+        <p class="cta-card__note">LINEで無料で受け取れます</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     フッター
+============================================================ -->
+<footer class="footer">
+  <p>© MION</p>
+  <p>このページの無断転載・複製はご遠慮ください。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
