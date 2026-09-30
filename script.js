@@ -95,7 +95,7 @@
   }
 
   function applyConfig() {
-    ["cta-button", "cta-banner"].forEach((id) => {
+    ["cta-button", "cta-banner", "sticky-cta-button"].forEach((id) => {
       const link = document.getElementById(id);
       if (link && LINE_URL) {
         link.setAttribute("href", LINE_URL);

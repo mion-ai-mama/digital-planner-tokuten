@@ -675,3 +675,31 @@ button:focus-visible {
   border-radius: var(--radius-md);
   box-shadow: 0 12px 28px -18px var(--color-card-shadow);
 }
+
+/* 画面下に常時表示するLINEボタン */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+  background: rgba(253, 250, 247, 0.94);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-cta__btn {
+  width: 100%;
+  max-width: 460px;
+  padding: 0.85em 1.2em;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* 固定ボタンにフッターが隠れないようにする */
+body {
+  padding-bottom: 5rem;
+}
