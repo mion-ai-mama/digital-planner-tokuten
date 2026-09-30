@@ -697,9 +697,41 @@ button:focus-visible {
   font-size: 0.95rem;
   line-height: 1.5;
   text-align: center;
+  /* LINEとひと目で分かる緑（このボタンだけ。ページ全体の配色は変えない） */
+  background: #039c45;
+  box-shadow: 0 10px 22px -8px rgba(3, 156, 69, 0.5);
+}
+.sticky-cta__btn:hover {
+  background: #028a3d;
+}
+
+.sticky-cta__icon {
+  flex: none;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 /* 固定ボタンにフッターが隠れないようにする */
 body {
   padding-bottom: 5rem;
+}
+
+/* 固定ボタンをゆっくり脈打たせて目に留まりやすくする（控えめな動き） */
+@keyframes sticky-cta-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 22px -8px rgba(3, 156, 69, 0.5);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 14px 26px -6px rgba(3, 156, 69, 0.7);
+  }
+}
+.sticky-cta__btn {
+  animation: sticky-cta-pulse 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta__btn {
+    animation: none;
+  }
 }
