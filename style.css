@@ -688,6 +688,16 @@ button:focus-visible {
   border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: center;
+  /* 初期は隠す。script.js が is-visible を付け外しする */
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.sticky-cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .sticky-cta__btn {
@@ -733,5 +743,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .sticky-cta__btn {
     animation: none;
+  }
+  .sticky-cta {
+    transition: none;
   }
 }

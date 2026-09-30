@@ -13,6 +13,8 @@
   ------------------------------------------------------------ */
   const LINE_URL = "https://sub.aione.co.jp/line/open/ErxG3f10mmcK?mtid=8LTecV7UlNz5";
   const OGP_IMAGE_URL = "";
+  /* 固定ボタンを出すスクロール量（画面の高さの何枚分か。1 = 画面1枚分＝スワイプ2〜3回ぶん） */
+  const STICKY_SHOW_SCREENS = 1;
 
   /* ------------------------------------------------------------
      コピー機能（クリップボードAPI／古いブラウザ向けの代替あり）
@@ -110,8 +112,29 @@
     }
   }
 
+  /* ------------------------------------------------------------
+     画面下の固定ボタン：少しスクロールしたら表示／最下部のCTAが見えている間は隠す
+  ------------------------------------------------------------ */
+  function setupStickyCta() {
+    const bar = document.querySelector(".sticky-cta");
+    const cta = document.getElementById("cta");
+    if (!bar || !cta) return;
+
+    function update() {
+      const scrolledEnough = window.scrollY >= window.innerHeight * STICKY_SHOW_SCREENS;
+      const rect = cta.getBoundingClientRect();
+      const ctaInView = rect.top < window.innerHeight && rect.bottom > 0;
+      bar.classList.toggle("is-visible", scrolledEnough && !ctaInView);
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
   function init() {
     applyConfig();
+    setupStickyCta();
     bindCopyDelegation();
     bindAccordion();
     setupRevealAnimation();
